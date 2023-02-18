@@ -1,0 +1,589 @@
+
+.slider {
+  margin-top: 16px;
+
+  .product{
+    img{
+      border-radius: 24px;
+    }
+  }
+  &__left {
+    background: #F7F7F7;
+    border-radius: 24px;
+    //width: 282px;
+    height: 373px;
+
+    .product {
+      text-align: center;
+      padding-top: 16px;
+    }
+  }
+
+  &__right {
+    margin-left: 18px;
+    //width: 902px;
+    max-height: 373px;
+  }
+}
+
+//product
+.product {
+  &__price {
+    padding: 16px;
+    padding-bottom: 0;
+
+    &-percent {
+      width: 48px;
+      height: 30px;
+      background: linear-gradient(252.18deg, #D72339 0.28%, #F23B51 93.8%);
+      border-radius: 80px;
+
+      span {
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 700;
+        color: #FFFFFF;
+      }
+    }
+
+    &-value {
+      span {
+        line-height: 22px;
+        text-decoration-line: line-through;
+        color: #BDBDBD;
+      }
+    }
+
+    &-main-value {
+      font-weight: 900;
+      line-height: 28px;
+      color: #333333;
+      font-size: 18px;
+    }
+
+    &-text {
+      font-size: 12px;
+      line-height: 19px;
+      color: #4F4F4F;
+      margin-right: 2px;
+    }
+  }
+
+  &__header {
+
+    .product__title {
+      margin-bottom: 30px;
+
+      span {
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 25px;
+        text-align: right;
+      }
+    }
+
+    .product__price {
+      &-value {
+        span {
+          font-size: 20px;
+          line-height: 31px;
+        }
+      }
+
+      &-main-value {
+        font-size: 20px;
+        line-height: 31px;
+      }
+
+      &-text {
+        font-size: 12px;
+        line-height: 19px;
+        color: #4F4F4F;
+        margin-right: 2px;
+      }
+    }
+  }
+}
+
+
+.line {
+  margin: 0 12px;
+  height: 1px;
+  background: #FFE9EE;
+}
+
+//row slides
+main{
+  .row-slides{
+    margin-top:57px;
+  }
+}
+.row-slides {
+  &__image {
+    border-radius: 24px;
+  }
+}
+
+
+//product slider
+.product__slider {
+  margin-top: 72px;
+
+  .product {
+    border-radius: 24px;
+    transition: background-color .3s ease-in-out 0s;
+
+    img {
+      transition: all .3s ease-in-out .1s;
+      transform: scale(1);
+    }
+  }
+
+  .product:hover {
+    background: white;
+
+    img {
+      transform: scale(1.13);
+    }
+  }
+
+  .swiper {
+    padding: 16px;
+    background: #F7F7F7;
+    border-radius: 24px;
+  }
+}
+
+//product header
+.product{
+  &__header {
+    margin-bottom: 30px;
+
+    &-right {
+      span {
+        font-weight: bold;
+        font-size: 18px;
+        margin-right: 12px;
+        margin-left: 24px;
+      }
+    }
+
+    &-left {
+      cursor: pointer;
+
+      span {
+        margin-right: 24px;
+        margin-left: 10px;
+      }
+
+      &:hover {
+        color: #C2123C;
+      }
+    }
+
+    &-icon {
+      width: 40px;
+      height: 40px;
+      background: #F7F7F7;
+      border-radius: 26px;
+
+      svg {
+        color: #D72339
+      }
+    }
+  }
+}
+
+
+//discount
+.discount {
+  .product {
+    padding: 16px 0;
+  }
+}
+
+//fav category
+.fav-category {
+  &-products {
+    margin-top: 24px;
+  }
+
+  &__right {
+    &-card {
+      &-col {
+        width: 163px;
+      }
+
+      &-item {
+        background: #F2F2F2;
+        border-radius: 16px;
+        padding: 8px;
+        cursor: pointer;
+
+        img {
+          transition: all .3s ease-in-out 0s;
+          transform: scale(1);
+        }
+
+        &:hover img {
+          transform: scale(1.05);
+        }
+
+        span {
+          display: inline-block;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 22px;
+          margin-top: 4px;
+        }
+      }
+    }
+
+    .line {
+      margin-left: 0;
+    }
+  }
+
+  &__left {
+    margin-right: 16px;
+    width: 399px;
+    img {
+      max-width: max-content;
+    }
+  }
+}
+
+
+//amazing offer
+.amazing-offer {
+  margin-top: 64px;
+
+  .product__price-main-value {
+    font-size: 21px;
+  }
+
+  &__right {
+    position: relative;
+    overflow: hidden;
+
+    img.fire {
+      position: absolute;
+      top: 0;
+      left: 12px;
+    }
+
+    .product__price-main {
+      margin-top: 50px;
+    }
+
+    .product__title {
+      span {
+        font-weight: bold;
+      }
+    }
+
+    .product img {
+      max-width: max-content;
+      height: 204px;
+      margin: 16px 39px;
+    }
+
+    &-title {
+      font-weight: 900;
+      font-size: 16px;
+    }
+
+    width: 633px;
+    height: 368px;
+    background: #F7F7F7;
+    border-radius: 24px;
+    margin-left: 24px;
+  }
+
+  &__left {
+    &-card {
+      &-icon-fire {
+        position: absolute;
+        left: 12px;
+        top: 0;
+        background-repeat: no-repeat;
+        visibility: visible;
+        opacity: 1;
+        transition: all .3s ease-out .1s;
+      }
+
+      &-icon-fire-hover {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        left: 12px;
+        top: -7px;
+        background-repeat: no-repeat;
+        transition: all .3s ease-out .1s;
+      }
+
+      &-item {
+        overflow: hidden;
+        padding: 12px;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+          .product img {
+            transform: scale(1.07);
+          }
+
+          .amazing-offer__left-card-icon-fire-hover {
+            visibility: visible;
+            top: 0;
+            opacity: 1;
+          }
+
+          .amazing-offer__left-card-icon-fire {
+            visibility: hidden;
+            opacity: 0;
+          }
+        }
+
+        .product {
+          display: flex;
+          justify-content: space-between;
+
+          img {
+            transform: scale(1);
+            transition: all .3s ease-in-out 0s;
+          }
+
+          &__price {
+            width: 100%;
+            padding-top: 0;
+            padding-right: 0;
+            padding-left: 0;
+
+            &-value {
+              font-size: 14px;
+            }
+
+          }
+
+          &__title {
+            font-weight: 700;
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: 22px;
+            color: #333333;
+          }
+        }
+
+        background: #F7F7F7;
+        border-radius: 24px;
+      }
+    }
+
+  }
+}
+
+//mobile app
+.mobile-app {
+  margin-top: 255px;
+
+  &__mobile-image {
+    position: absolute;
+    bottom: 0;
+    left: 60px;
+  }
+
+  &__container {
+    margin: 0 auto;
+    position: relative;
+    width: 888px;
+    height: 155px;
+    padding: 32px;
+    background: linear-gradient(239.65deg, #CE273B 14.24%, #F23B51 126.89%);
+    border-radius: 24px;
+
+    button {
+      padding: 12px 16px;
+      height: 48px;
+      font-weight: 700;
+      color: white;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      transition: all .2s ease-in-out 0s;
+
+      &:hover {
+        background: #FFE9EE;
+        color: #C2123C;
+      }
+
+      + button {
+        margin-right: 12px;
+      }
+
+      img {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 15px;
+  }
+}
+
+//mobile devices
+.mobile {
+  .slider__right {
+    margin-left: 0;
+  }
+  .slider__left {
+    display: block;
+    @include media-breakpoint-down(lg) {
+      display: none !important;
+    }
+  }
+  .fav-category__left, .amazing-offer__right, .product__header-left, .mobile-app__mobile-image {
+    display: block;
+    @include media-breakpoint-down(lg) {
+      display: none !important;
+    }
+  }
+  .fav-category__right-card-col {
+    @include media-breakpoint-down(md) {
+      width: calc(100% / 3);
+    }
+  }
+  .amazing-offer__left-card {
+    @include media-breakpoint-down(sm) {
+      flex-wrap: nowrap;
+      .amazing-offer__left {
+        overflow: auto;
+        padding-bottom: 10px;
+      }
+      > div {
+        margin-bottom: 15px;
+        width: 274px;
+        height: 112px;
+      }
+    }
+  }
+  .amazing-offer__left {
+    @include media-breakpoint-down(sm) {
+      overflow-x: auto;
+    }
+  }
+  .mobile-app{
+    @include media-breakpoint-down(lg) {
+      margin-top: 24px;
+    }
+    .mobile-app__container {
+      @include media-breakpoint-down(lg) {
+        width: 96% !important;
+      }
+      @include media-breakpoint-down(md){
+
+        height: auto;
+        text-align: center;
+        width: 96%;
+        button:nth-of-type(1), button:nth-of-type(2) {
+          width: 48%;
+        }
+        button:nth-of-type(3) {
+          margin-top: 15px;
+          margin-right: 0;
+          width: 100%;
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        button {
+          width: 100% !important;
+          margin-right: 0;
+
+          &:nth-of-type(2) {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    @include media-breakpoint-down(md) {
+      margin-top: 24px;
+      .row >div:nth-of-type(4){
+        width: 100%;
+      }
+    }
+    &__certificate{
+      @include media-breakpoint-down(md) {
+        display: flex;
+        justify-content: end;
+        margin-top: 16px;
+        direction: rtl;
+        div{
+          margin-top: 0;
+          width: 78px;
+          height: 78px;
+          padding: 8px;
+          + div{
+            margin-right: 9px;
+          }
+        }
+      }
+    }
+    .logo{
+      display: block;
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+
+  }
+  .certificate{
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+  .row-slides__image{
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+  .col-6{
+    @media (max-width: 380px){
+      width: 100%;
+    }
+  }
+  .swiper-button.left,.swiper-button.right{
+    @include media-breakpoint-down(md) {
+      svg{
+        width: 14px;
+        height: 14px;
+      }
+      img {
+        width: 24px;
+        height: 69px;
+      }
+    }
+  }
+  .product__slider,.amazing-offer,main .row-slides {
+    @include media-breakpoint-down(md) {
+      margin-top: 31px;
+    }
+  }
+  main .row-slides{
+    @include media-breakpoint-down(md) {
+      .col-6  {
+        width: 100%;
+      }
+    }
+  }
+  .header{
+    @include media-breakpoint-down(md) {
+      margin-top: 12px;
+    }
+  }
+}

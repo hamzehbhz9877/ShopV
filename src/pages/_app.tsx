@@ -1,6 +1,24 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
+import MainLayout from "@/layout/home";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import "@/static/css/main.css";
+
+interface appPropsExtra extends AppProps {
+  Component: AppProps["Component"] & {
+    getLayout: (page: React.ReactNode) => JSX.Element;
+  };
 }
+
+function MyApp({ Component, pageProps }: appPropsExtra) {
+  if (Component.getLayout) {
+    return Component.getLayout(<Component {...pageProps} />);
+  }
+
+  return (
+      <MainLayout>
+        <Component {...pageProps} />
+      </MainLayout>
+  );
+}
+
+export default MyApp;

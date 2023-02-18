@@ -1,0 +1,224 @@
+.header {
+
+  margin-top: 32px;
+
+  &__bottom{
+    margin-bottom: 12px;
+  }
+  &__top{
+    height: 80px;
+    border-radius: 40px;
+    box-shadow: 0 0 24px 0 #BDB6B740;
+    padding: 24px;
+  }
+}
+a{
+  &:hover{
+    color: var(--c2) !important;
+  }
+}
+.navbar {
+  .mobile{
+    display: none;
+    @include media-breakpoint-down(lg) {
+      display: block;
+    }
+  }
+  &__right {
+    color: var(--c3);
+
+    &-item {
+      font-size: 14px;
+      cursor: pointer;
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+
+      + li {
+        margin-right: 22px;
+      }
+    }
+  }
+
+  &__left {
+    color: #7D7D7D;
+    &-item {
+      display: block;
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+      + li {
+        margin-right: 10px;
+      }
+    }
+    &-search {
+      background-color: #F7F7F7;
+      border-radius: 32px;
+      width: 254px;
+      height: 48px;
+      padding: 13px 13px 13px 20px;
+      border: 1px solid transparent !important;
+      font-size: 14px;
+      &:focus
+      {
+        border-color: var(--c2) !important;
+      }
+      &-icon{
+        position: absolute;
+        left: 13px;
+        @extend %center-vertically;
+      }
+    }
+    &-cart{
+      padding: 8px;
+      height: 48px;
+      width: 48px;
+      background: #F7F7F7;
+      border-radius: 24px;
+    }
+    button{
+      height: 48px;
+      background: var(--c1);
+      border-radius: 24px;
+      width: 126px;
+    }
+  }
+
+}
+
+.category-dropdown{
+  z-index: 10;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  background: #FFFFFF;
+  height: 360px;
+  padding: 16px !important;
+  box-shadow: 0px 0px 24px rgba(189, 182, 183, 0.25);
+  border-radius: 24px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+  &--active{
+    visibility: visible;
+    opacity: 1;
+  }
+  &__content{
+    padding: 9px;
+    &-title{
+      margin-bottom: 17px;
+      font-size: 14px;
+      position: relative;
+      padding-right: 8px;
+      &::before{
+        content: "";
+        position: absolute;
+        left: 100%;
+        width: 4px;
+        height: 24px;
+        background: var(--c2);
+        border-radius: 13px;
+      }
+    }
+    &-item{
+      a{
+        transition:all .2s ease-in-out 0s;
+      }
+
+      + li{
+        margin-bottom: 21px;
+      }
+    }
+    &-sub-item{
+      font-size: 12px;
+      line-height: 19px;
+      + li{
+        margin-top: 12px;
+      }
+    }
+  }
+
+  &__header-item{
+    padding: 8px;
+    width: 202px;
+    height: 40px;
+    border-radius: 12px;
+    + li{
+      margin-top: 8px;
+    }
+    &-ico{
+      position: absolute;
+      left: 10px;
+      visibility: hidden;
+      top: 50%;
+      transform: translateX(10px) translateY(-50%);
+      opacity: 0;
+      transition:all .3s ease-in-out 0s;
+    }
+    &--active{
+      background: #F7F7F7;
+      border-radius: 12px;
+      color: var(--c2);
+      .arrow-left{
+        visibility: visible;
+        transform: translateX(0) translateY(-50%);
+        opacity: 1;
+      }
+      .icon g{
+        color: var(--c2);
+      }
+    }
+  }
+}
+.swiper-pagination {
+  position: absolute !important;
+  @extend %center-horizontally;
+  bottom: 8px;
+  right: 0;
+  z-index: 1;
+  &-bullet{
+    background: var(--c2) !important;
+    opacity: 0.2;
+
+    width: 8px;
+    + &-bullet{
+      margin-right: 4px;
+    }
+    &-active{
+      width: 33px !important;
+      border-radius: 18px !important;
+      opacity: 1;
+    }
+  }
+
+}
+//mobile devices
+.mobile{
+   .logo-mobile{
+    display: none !important;
+    h6{
+      margin-right: 11px;
+      color: var(--c2);
+    }
+
+    margin-bottom: 10px;
+    @include media-breakpoint-down(lg) {
+      display: flex !important;
+    }
+  }
+  .header__top{
+    @include media-breakpoint-down(lg) {
+      box-shadow: none;
+      padding: 0;
+      height: max-content;
+      .navbar__left-search{
+        width: 213px;
+      }
+      .login-icon {
+        margin-right: 17px;
+      }
+    }
+  }
+}
+
